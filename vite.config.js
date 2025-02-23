@@ -5,6 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: "0.0.0.0",  // Allows external access (Render requires this)
-    port: 5173,  // Use Render's default or fallback to 5173
+    port: 5173,  // Use default/fallback port
+    strictPort: true,  // Ensures the app runs only on the assigned port
+    allowedHosts: ["netflix-clone-pcqb.onrender.com"],  // Allow Render's host
   },
 });
